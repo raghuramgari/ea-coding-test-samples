@@ -1,4 +1,4 @@
-# Web App
+# IOS App
 
 ## Getting Started
 
@@ -8,19 +8,12 @@ These instructions will help in setting the project and running it up on your lo
 
 Below software should be installed before project setup,
 
-* Node.js
+* Xcode
 
 ### Project setup
 
-* Open command prompt/powershell/bash/terminal and run the following commands in this folder,
+* Open Xcode and import the project in this folder.
 
-```
-npm install
-npm install - g @angular/cli
-ng serve
-```
-
-* Once, the project is built then open the url http://localhost:4200/festivals in browser
-
+* Once, the project is built then load the artifact in emulator or device of your choice.
 
 **Note** - These instructions will assist you with setup but you are free to explore tools, processes and techniques for setting up the project.
