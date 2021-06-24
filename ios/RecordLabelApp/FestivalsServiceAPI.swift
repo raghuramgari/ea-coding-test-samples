@@ -26,7 +26,7 @@ class FestivalsServiceAPI {
     public static let shared = FestivalsServiceAPI()
     private init() {}
     private let urlSession = URLSession.shared
-    private let baseURL = URL(string: "http://eacodingtest.digital.energyaustralia.com.au")!
+    private let baseURL = URL(string: "https://eacp.energyaustralia.com.au/codingtest")!
     private let jsonDecoder: JSONDecoder = JSONDecoder()
     
     public func fetchFestivals(from endpoint: Endpoint, result: @escaping (Result<[MusicFestival], APIServiceError>) -> Void) {
