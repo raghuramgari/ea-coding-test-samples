@@ -1,8 +1,9 @@
 const PROXY_CONFIG = {
   '/api/*': {
-    'target': `http://eacodingtest.digital.energyaustralia.com.au/`,
+    'target': `https://eacp.energyaustralia.com.au/codingtest/`,
     'secure': true,
-    'logLevel': 'debug',
+    'changeOrigin': true,
+    'logLevel': 'debug'
   },
 };
 
