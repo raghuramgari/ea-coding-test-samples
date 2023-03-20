@@ -2,12 +2,12 @@
 import { Festivals } from '../src/helpers';
 
 context('Music festivals', () => {
-  let festival: string, expectedFestivalLinks:string;
+  let festival: string
     
   beforeEach(() => {
     cy.fixture('festival.json').then(data => (festival = data));
     cy.visit('/');
-    cy.wait(1000);
+    cy.intercept('GET', '/api/v1/festivals*')
   });
 
   it('Validate the title and Navigation url', () => {
@@ -19,8 +19,8 @@ context('Music festivals', () => {
     Festivals.lengthOffestivals();
   })
 
-  it.skip('Validate festivals in the list', () => {
-    Festivals.getfestivalList(expectedFestivalLinks);
+  it('Validate festivals in the list', () => {
+    Festivals.getfestivalList(festival);
   })
 
 })
