@@ -24,3 +24,24 @@ ng serve
 
 
 **Note** - These instructions will assist you with setup but you are free to explore tools, processes and techniques for setting up the project.
+
+
+### Cypress setp
+
+* Open prompt/powershell/bash/terminal and open the web folder of ea-coding-test-sameples project.
+
+and run the below commands to run the cypress
+
+```` 
+Headless mode 
+
+npx cypress open 
+
+-------- then launch the E2E test cases 
+--------- Run any of the test suit
+
+Headed mode 
+
+npx cypress run
+
+------ Automatically scripts will be run in command line
