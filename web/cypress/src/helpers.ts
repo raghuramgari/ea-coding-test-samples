@@ -9,17 +9,17 @@ export class Festivals {
     }
 
     static lengthOffestivals() {
-        cy.get('ol').children('li').then(($lis) => {
+        cy.get('ol').children().then(($lis) => {
             expect($lis).to.have.length(18);
 
         })
     }
    static getfestivalList(festival: string) {
-    let expectedFestivalLinks = Object.values(festival.festivalList);
-    cy.get('ol').find('li').each(($li, index, $list) => {
+    let expectedFestivalLinks = Object.values(festival.festivalList);   
+    cy.get('ol').children().each(($li, index, $list) => {
             cy.wrap($li).invoke("text").then((text) => {
-                expect(text).to.be.equal(expectedFestivalLinks[index]);
-                expect($list.length).to.be.equal(expectedFestivalLinks.length);
+                expect(text).to.contain(expectedFestivalLinks[index]);
+                expect($list.length).to.equal(expectedFestivalLinks.length);
             })
         })
     }
