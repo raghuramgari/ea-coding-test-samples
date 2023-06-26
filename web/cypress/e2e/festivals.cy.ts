@@ -10,7 +10,7 @@ context('Music festivals', () => {
     cy.intercept('GET', '/api/v1/festivals*')
   });
 
-  it('Validate the title and Navigation url', () => {
+  it('Validate the title  and Navigation url', () => {
     Festivals.getTitle('EaCodingTest');
     Festivals.shouldIncludeInUrl('/festivals');
   })
