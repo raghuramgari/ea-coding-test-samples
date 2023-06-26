@@ -1,5 +1,3 @@
-// / <reference types="cypress" />
-// export class Festivals {
 class pages {
 
   printAllElemnts() {
@@ -8,7 +6,7 @@ class pages {
         cy.log(`Item ${index}: ${text}`)
       });
     });
-  }
+  };
   lenghts(){
     cy.get('ol').find('li').should('have.length', 36).each(($li, index) => {
       cy.wrap($li).invoke('text').then((text) => {
@@ -16,7 +14,7 @@ class pages {
         expect(text).to.have.length.greaterThan(0);
       });
     });
-  }
-}
+  };
+};
 
 export default pages;
